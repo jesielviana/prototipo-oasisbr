@@ -1,0 +1,167 @@
+header.hidden-print {
+  background-color: #f8c346;
+}
+
+.navbar-brand {
+  height: 130px;
+}
+
+.logo-img {
+  max-height: 100px;
+}
+
+.nav-main {
+  display: flex;
+  align-items: center;
+  height: 130px;
+  justify-content: center;
+}
+
+.nav-main a,
+.nav-footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #223360;
+  font-size: 1.3rem;
+}
+
+.nav-main a {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+  }
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+  border-bottom: 2px solid #223360;
+}
+
+.nav-footer li {
+  padding-bottom: 1rem;
+  list-style: none;
+}
+
+.nav-footer li > a:hover,
+.nav-footer li > a:focus {
+  outline: none;
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.searchHomeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+.searchForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchForm div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.searchForm_lookfor {
+  width: 100% !important;
+  max-width: 600px;
+  margin-right: 1rem;
+}
+
+.search-btn {
+  margin-top: 1rem;
+}
+
+.btn-secondary {
+  background-color: #999;
+  color: #fff;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #888;
+  color: #fff;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #1a3c59;
+  border-color: #e0e0e0;
+}
+
+section {
+  margin-top: 100px;
+  color: #808080;
+}
+
+.data div {
+  margin-bottom: 60px;
+}
+
+.data h2,
+h3 {
+  color: #808080;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.data h2 {
+  font-size: 32px;
+}
+
+.data h3 {
+  margin-top: 0;
+}
+
+.big-image {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  margin-top: 100px;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.footer-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-gap-1 {
+  row-gap: 1rem;
+}
+
+.social-media img {
+  width: 32px;
+  height: 32px;
+}
