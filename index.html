@@ -1,402 +1,254 @@
 <!DOCTYPE html>
 <!-- saved from url=(0024)http://localhost/vufind/ -->
-<html lang="pt" data-lt-installed="true">
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="pt-br" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <meta name="Generator" content="VuFind 7.1.1">
-  <title>Nova pesquisa</title> <!-- RTL styling -->
-  <link href="./files/compiled.css" media="all" rel="stylesheet" type="text/css">
-  <link href="./files/print.css" media="print" rel="stylesheet" type="text/css">
-  <!--[if lt IE 10]><link href="&#x2F;vufind&#x2F;themes&#x2F;bootstrap3&#x2F;css&#x2F;flex-fallback.css&#x3F;_&#x3D;1625060333" media="" rel="stylesheet" type="text&#x2F;css"><![endif]-->
-  <link href="./files/custom.css" media="all" rel="stylesheet" type="text/css">
-  <link href="http://localhost/vufind/themes/oasisbr/images/icons/favicon.ico?_=1625714874" rel="shortcut icon"
-    type="image/x-icon">
-  <link href="http://localhost/vufind/Search/OpenSearch?method=describe" rel="search"
-    type="application/opensearchdescription+xml" title="Pesquisa no Catálogo da Biblioteca">
-  <script nonce="">
+  
+<meta name="Generator" content="VuFind 7.1.1">  <title>OasisBr</title>    <!-- RTL styling -->
+    <link href="./OasisBr_files/compiled.css" media="all" rel="stylesheet" type="text/css">
+<link href="./OasisBr_files/print.css" media="print" rel="stylesheet" type="text/css">
+<!--[if lt IE 10]><link href="&#x2F;vufind&#x2F;themes&#x2F;bootstrap3&#x2F;css&#x2F;flex-fallback.css&#x3F;_&#x3D;1625060333" media="" rel="stylesheet" type="text&#x2F;css"><![endif]-->
+<link href="./OasisBr_files/custom.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://localhost/vufind/themes/oasisbr/images/icons/favicon.ico?_=1625714874" rel="shortcut icon" type="image/x-icon">
+<link href="http://localhost/vufind/Search/OpenSearch?method=describe" rel="search" type="application/opensearchdescription+xml" title="Busca no Catálogo da Biblioteca">      <script nonce="">
     //<!--
     var userIsLoggedIn = false;
     //-->
-  </script>
-  <script
-    data-dapp-detection="">!function () { let e = !1; function n() { if (!e) { const n = document.createElement("meta"); n.name = "dapp-detected", document.head.appendChild(n), e = !0 } } if (window.hasOwnProperty("ethereum")) { if (window.__disableDappDetectionInsertion = !0, void 0 === window.ethereum) return; n() } else { var t = window.ethereum; Object.defineProperty(window, "ethereum", { configurable: !0, enumerable: !1, set: function (e) { window.__disableDappDetectionInsertion || n(), t = e }, get: function () { if (!window.__disableDappDetectionInsertion) { const e = arguments.callee; e && e.caller && e.caller.toString && -1 !== e.caller.toString().indexOf("getOwnPropertyNames") || n() } return t } }) } }();</script>
-  <script src="./files/jquery.min.js" nonce=""></script>
-  <script src="./files/bootstrap.min.js" nonce=""></script>
-  <script src="./files/bootstrap-accessibility.min.js" nonce=""></script>
-  <script src="./files/validator.min.js" nonce=""></script>
-  <script src="./files/form-attr-polyfill.js" nonce=""></script>
-  <script src="./files/autocomplete.js" nonce=""></script>
-  <script src="./files/common.js" nonce=""></script>
-  <script src="./files/lightbox.js" nonce=""></script>
-  <script src="./files/account_ajax.js" nonce=""></script>
-  <script nonce="">
+</script>
+<script src="./OasisBr_files/jquery.min.js" nonce=""></script>
+<script src="./OasisBr_files/bootstrap.min.js" nonce=""></script>
+<script src="./OasisBr_files/bootstrap-accessibility.min.js" nonce=""></script>
+<script src="./OasisBr_files/validator.min.js" nonce=""></script>
+<script src="./OasisBr_files/form-attr-polyfill.js" nonce=""></script>
+<script src="./OasisBr_files/autocomplete.js" nonce=""></script>
+<script src="./OasisBr_files/common.js" nonce=""></script>
+<script src="./OasisBr_files/lightbox.js" nonce=""></script>
+<script src="./OasisBr_files/teste.js" nonce=""></script>
+<script src="./OasisBr_files/account_ajax.js" nonce=""></script>
+<script nonce="">
     //<!--
     VuFind.path = '/vufind';
-    VuFind.defaultSearchBackend = 'Solr';
-    VuFind.addTranslations({ "add_tag_success": "Tags guardadas", "bulk_email_success": "O(s) item(ns) foram enviados por email", "bulk_noitems_advice": "Nenhum item foi seleccionado. Por favor, clique na caixa de selecção ao lado de um item e tente novamente.", "bulk_save_success": "O(s) registo(s) foram guardados com sucesso", "close": "Fechar", "collection_empty": "Não há registos para mostrar.", "eol_ellipsis": "…", "error_occurred": "Erro na aplicação", "go_to_list": "Go to List", "hold_available": "Disponível para levantamento", "libphonenumber_invalid": "Phone number invalid", "libphonenumber_invalidcountry": "Invalid country calling code", "libphonenumber_invalidregion": "Invalid region code:", "libphonenumber_notanumber": "The string supplied did not seem to be a phone number", "libphonenumber_toolong": "The string supplied is too long to be a phone number", "libphonenumber_tooshort": "The string supplied is too short to be a phone number", "libphonenumber_tooshortidd": "Phone number too short after IDD", "loading": "A carregar", "more": "Mais", "number_thousands_separator": ",", "sms_success": "Mensagem enviada.", "Phone number invalid": "Phone number invalid", "Invalid country calling code": "Invalid country calling code", "Invalid region code": "Invalid region code:", "The string supplied did not seem to be a phone number": "The string supplied did not seem to be a phone number", "The string supplied is too long to be a phone number": "The string supplied is too long to be a phone number", "The string supplied is too short to be a phone number": "The string supplied is too short to be a phone number", "Phone number too short after IDD": "Phone number too short after IDD", "account_checkouts_due": "Items due soon", "account_checkouts_overdue": "Items overdue", "account_has_alerts": "Your account has alerts", "account_normal_checkouts": "Exemplares emprestados", "account_requests_available": "Disponível para levantamento", "account_requests_in_transit": "Em trânsito para o local de levantamento" });
+VuFind.defaultSearchBackend = 'Solr';
+VuFind.addTranslations({"add_tag_success": "Tags guardadas","bulk_email_success": "O(s) item(ns) foram enviados por e-mail","bulk_noitems_advice": "Nenhum item foi selecionado. Por favor, clique na caixa de seleção ao lado de um item e tente novamente.","bulk_save_success": "O(s) registro(s) foram salvos com sucesso","close": "fechar","collection_empty": "Não há registros para mostrar.","eol_ellipsis": "…","error_occurred": "Erro na aplicação","go_to_list": "Ir para a lista","hold_available": "Disponível para levantamento","libphonenumber_invalid": "Número de telefone inválido","libphonenumber_invalidcountry": "Código telefônico de país inválido","libphonenumber_invalidregion": "Código de região inválido (DDD):","libphonenumber_notanumber": "A informação fornecida não se assemelha a um número telefônico","libphonenumber_toolong": "A informação fornecida é muito longa para ser um número telefônico","libphonenumber_tooshort": "A informação fornecida é muito curta para ser um número telefônico","libphonenumber_tooshortidd": "O número telefônico é muito curto depois do DDI","loading": "Carregando","more": "Mais","number_thousands_separator": ",","sms_success": "Mensagem enviada.","Phone number invalid": "Número de telefone inválido","Invalid country calling code": "Código telefônico de país inválido","Invalid region code": "Código de região inválido (DDD):","The string supplied did not seem to be a phone number": "A informação fornecida não se assemelha a um número telefônico","The string supplied is too long to be a phone number": "A informação fornecida é muito longa para ser um número telefônico","The string supplied is too short to be a phone number": "A informação fornecida é muito curta para ser um número telefônico","Phone number too short after IDD": "O número telefônico é muito curto depois do DDI","account_checkouts_due": "Itens com vencimento próximo","account_checkouts_overdue": "Itens vencidos","account_has_alerts": "Sua conta tem alertas","account_normal_checkouts": "Itens emprestados","account_requests_available": "Disponível para levantamento","account_requests_in_transit": "Em trânsito para Coletar Localização"});
     //-->
-  </script>
-</head>
+</script></head>
 
 <body class="template-dir-search template-name-home ">
-  <header class="hidden-print">
-    <a class="sr-only" href="http://localhost/vufind/#content">Ir para o conteúdo</a>
+    <header class="hidden-print">
+        <a class="sr-only" href="http://localhost/vufind/#content">Pular para o conteúdo</a>
     <div class="banner navbar">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
-        <a class="navbar-brand lang-pt" href="http://localhost/vufind/">
-          <img class="logo-img" src="./files/ibict.png" alt="Logo do IBICT">
-        </a>
-      </div>
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <a class="navbar-brand lang-pt-br" href="http://localhost/vufind/">
+      <img class="logo-img" src="./OasisBr_files/ibict.png" alt="Logo do IBICT">
+    </a>
+  </div>
       <div class="collapse navbar-collapse" id="header-collapse">
-        <nav class="nav-main">
-          <ul role="navigation" class="nav navbar-nav flip">
-            <li>
-              <a href="http://localhost/vufind/">Início</a>
+      <nav class="nav-main">
+        <ul role="navigation" class="nav navbar-nav flip">
+          <li>
+            <a href="http://localhost/vufind/">Início</a>
+          </li>
+          <li>
+            <a href="http://localhost/vufind/about/home">Sobre</a>
+          </li>
+          <li>
+            <a href="http://localhost/vufind/#">Fontes Coletadas</a>
+          </li>
+          <li>
+            <a href="http://localhost/vufind/#">Navegar</a>
+          </li>
+          <li>
+            <a href="http://localhost/vufind/#">Indicadores</a>
+          </li>
+                                          <li class="logoutOptions hidden">
+              <a href="http://localhost/vufind/MyResearch/Home?redirect=0"><i id="account-icon" class="fa fa-user-circle" aria-hidden="true"></i> A sua conta</a>
             </li>
-            <li>
-              <a href="http://localhost/vufind/#">Sobre</a>
-            </li>
-            <li>
-              <a href="http://localhost/vufind/#">Fontes Coletadas</a>
-            </li>
-            <li>
-              <a href="http://localhost/vufind/#">Navegar</a>
-            </li>
-            <li>
-              <a href="http://localhost/vufind/#">Idicadores</a>
-            </li>
-            <li class="logoutOptions hidden">
-              <a href="http://localhost/vufind/MyResearch/Home?redirect=0"><i id="account-icon"
-                  class="fa fa-user-circle" aria-hidden="true"></i> A sua conta</a>
-            </li>
-            <li class="logoutOptions hidden">
-              <a href="http://localhost/vufind/MyResearch/Logout" class="logout"><i class="fa fa-sign-out"
-                  aria-hidden="true"></i> Sair</a>
+                        <li class="logoutOptions hidden">
+              <a href="http://localhost/vufind/MyResearch/Logout" class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
             </li>
             <li id="loginOptions" class="hidden">
-              <a href="http://localhost/vufind/MyResearch/UserLogin" data-lightbox=""><i class="fa fa-sign-in"
-                  aria-hidden="true"></i> Entrar</a>
-            </li>
-
-
-            <li class="language dropdown">
-              <a href="http://localhost/vufind/#" class="dropdown-toggle" data-toggle="dropdown">Idioma <b
-                  class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="http://localhost/vufind/?lng=en" rel="nofollow">
-                    English </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=de" rel="nofollow">
-                    Deutsch </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=es" rel="nofollow">
-                    Español </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=fr" rel="nofollow">
-                    Français </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=it" rel="nofollow">
-                    Italiano </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=ja" rel="nofollow">
-                    日本語 </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=nl" rel="nofollow">
-                    Nederlands </a>
-                </li>
-                <li class="active">
-                  <a href="http://localhost/vufind/?lng=pt" rel="nofollow">
-                    Português </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=pt-br" rel="nofollow">
-                    Português (Brasil) </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=zh-cn" rel="nofollow">
-                    中文(简体) </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=zh" rel="nofollow">
-                    中文（繁體） </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=tr" rel="nofollow">
-                    Türkçe </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=he" rel="nofollow">
-                    עברית </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=ga" rel="nofollow">
-                    Gaeilge </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=cy" rel="nofollow">
-                    Cymraeg </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=el" rel="nofollow">
-                    Ελληνικά </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=ca" rel="nofollow">
-                    Català </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=eu" rel="nofollow">
-                    Euskara </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=ru" rel="nofollow">
-                    Русский </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=cs" rel="nofollow">
-                    Čeština </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=fi" rel="nofollow">
-                    Suomi </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=sv" rel="nofollow">
-                    Svenska </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=pl" rel="nofollow">
-                    polski </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=da" rel="nofollow">
-                    Dansk </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=sl" rel="nofollow">
-                    slovenščina </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=ar" rel="nofollow">
-                    اللغة العربية </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=bn" rel="nofollow">
-                    বাংলা </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=gl" rel="nofollow">
-                    Galego </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=vi" rel="nofollow">
-                    Tiếng Việt </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=hr" rel="nofollow">
-                    Hrvatski </a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/?lng=hi" rel="nofollow">
-                    हिंदी </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
+                              <a href="http://localhost/vufind/MyResearch/UserLogin" data-lightbox=""><i class="fa fa-sign-in" aria-hidden="true"></i> Entrar</a>
+                          </li>
+          
+          
+              <li class="language dropdown">
+          <a href="http://localhost/vufind/#" class="dropdown-toggle" data-toggle="dropdown">Idioma <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+                          <li>
+                <a href="http://localhost/vufind/?lng=en" rel="nofollow">
+                  English                </a>
+        </li>
+                    <li class="active">
+                <a href="http://localhost/vufind/?lng=pt-br" rel="nofollow">
+                  Português (Brasil)                </a>
+        </li>
+                    <li>
+                <a href="http://localhost/vufind/?lng=es" rel="nofollow">
+                  Español                </a>
+        </li>
+            </ul>
+      </li>
+        </ul>
+      </nav>
     </div>
+  </div>
   </header>
-  <nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <nav class="breadcrumbs" aria-label="Trilhas de Navegação">
     <div class="container">
-    </div>
+          </div>
   </nav>
   <div role="main" class="main">
     <div id="content" class="container">
-
-      <div class="searchHomeContent">
-        <div class="search-img">
-          <img src="./files/oasisbr.png" alt="Logo do OasisBR">
-        </div>
-        <form id="searchForm" class="searchForm navbar-form navbar-left flip" method="get"
-          action="http://localhost/vufind/Search/Results" name="searchForm" autocomplete="off">
-          <div>
-            <input id="searchForm_lookfor"
-              class="searchForm_lookfor form-control search-query autocomplete searcher:Solr ac-auto-submit" type="text"
-              name="lookfor" value="" aria-label="Search terms">
-            <select id="searchForm_type" class="searchForm_type form-control btn-primary" name="type"
-              data-native-menu="false" aria-label="Search type">
-              <option value="AllFields">Palavra solta</option>
-              <option value="Title">Título</option>
-              <option value="Author">Autor</option>
-              <option value="Subject">Assunto</option>
-              <option value="CallNumber">Área/Cota</option>
-              <option value="ISN">ISBN/ISSN</option>
-              <option value="tag">Tag</option>
-            </select>
+      
+<div class="searchHomeContent">
+  <div class="search-img">
+    <img src="./OasisBr_files/oasisbr.png" alt="Logo do OasisBR">
+  </div>
+      <form id="searchForm" class="searchForm navbar-form navbar-left flip" method="get" action="http://localhost/vufind/Search/Results" name="searchForm" autocomplete="off">
+            <div>
+      <input id="searchForm_lookfor" class="searchForm_lookfor form-control search-query autocomplete searcher:Solr ac-auto-submit" type="text" name="lookfor" value="" aria-label="Termos de pesquisa">
+              <select id="searchForm_type" class="searchForm_type form-control btn-primary" name="type" data-native-menu="false" aria-label="Search type">
+                                            <option value="AllFields">Todos os campos</option>
+                                  <option value="Title">Título</option>
+                                  <option value="Author">Autor</option>
+                                  <option value="Subject">Assunto</option>
+                                  <option value="CallNumber">Área/Cota</option>
+                                  <option value="ISN">ISBN/ISSN</option>
+                                  <option value="tag">Tag</option>
+                            </select>
           </div>
-          <div class="search-btn">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i>
-              Pesquisar</button>
-            <a href="http://localhost/vufind/Search/Advanced" class="btn btn-secondary" rel="nofollow">Avançada</a>
-
-
-          </div>
-        </form>
-        <script type="text/javascript" nonce="">
-          //<!--
-          $("#searchForm_lookfor").focus();
-    //-->
-        </script>
-      </div>
-      <!-- importa a seção de informações abaixo da busca na página inicial -->
-      <section class="row data">
-        <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-          <h2>82665545</h2>
-          <h3>Artigos</h3>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-          <h2>82665545</h2>
-          <h3>Teses</h3>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-          <h2>82665545</h2>
-          <h3>Dissertações</h3>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-          <h2>82665545</h2>
-          <h3>DADOS DE PESQUISA</h3>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-          <h2>82665545</h2>
-          <h3>RELATÓRIOS DE PESQUISA</h3>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-          <h2>82665545</h2>
-          <h3>TRABALHOS DE CONCLUSÃO DE CURSO</h3>
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="col-md-12 big-image">
-          <img class="img-responsive" src="./files/big-image.png" alt="Imagem">
-        </div>
-      </section>
-
-      <section class="row">
-        <h1 class="text-center">Nossos Parceiros</h1>
-        <div class="col-md-2">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-        </div>
-        <div class="col-md-2">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-        </div>
-        <div class="col-md-2">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-        </div>
-        <div class="col-md-2">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-        </div>
-        <div class="col-md-2">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-        </div>
-        <div class="col-md-2">
-          <img class="img-responsive" src="./files/image.png" alt="Imagem">
-        </div>
-
-      </section>
-      <script type="text/javascript" nonce="">
-        //<!--
-        $(document).ready(function () {
-          $.ajax({
-            dataType: 'json',
-            method: 'GET',
-            data: { 'offlineModeMsg': 'ils_offline_home_message' },
-            url: VuFind.path + '/AJAX/JSON?method=getIlsStatus',
-            success: function (response) {
-              $('.searchHomeContent').prepend(response.data.html);
-            }
-          });
-        });
-    //-->
-      </script>
+    <div class="search-btn">
+      <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
+              <a href="http://localhost/vufind/Search/Advanced" class="btn btn-secondary" rel="nofollow">Avançada</a>
+            
+                              
     </div>
+  </form>
+  <script type="text/javascript" nonce="">
+    //<!--
+    $("#searchForm_lookfor").focus();
+    //-->
+</script>  </div>
+<!-- importa a seção de informações abaixo da busca na página inicial -->
+<section class="row data">
+  <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+    <h2>82665545</h2>
+    <h3>Artigos</h3>
+  </div>
+
+  <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+    <h2>82665545</h2>
+    <h3>Teses</h3>
+  </div>
+
+  <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+    <h2>82665545</h2>
+    <h3>Dissertações</h3>
+  </div>
+
+  <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+    <h2>82665545</h2>
+    <h3>DADOS DE PESQUISA</h3>
+  </div>
+
+  <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+    <h2>82665545</h2>
+    <h3>RELATÓRIOS DE PESQUISA</h3>
+  </div>
+
+  <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+    <h2>82665545</h2>
+    <h3>TRABALHOS DE CONCLUSÃO DE CURSO</h3>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-md-12 big-image">
+    <img class="img-responsive" src="./OasisBr_files/big-image.png" alt="Imagem">
+  </div>
+</section>
+
+<section class="row partners">
+  <h1 class="text-center">Nossos Parceiros</h1>
+  <div class="col-md-2 col-sm-4 col-xs-6">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+  </div>
+  <div class="col-md-2 col-sm-4 col-xs-6">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+  </div>
+  <div class="col-md-2 col-sm-4 col-xs-6">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+  </div>
+  <div class="col-md-2 col-sm-4 col-xs-6">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+  </div>
+  <div class="col-md-2 col-sm-4 col-xs-6">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+  </div>
+  <div class="col-md-2 col-sm-4 col-xs-6">
+    <img class="img-responsive" src="./OasisBr_files/image.png" alt="Imagem">
+  </div>
+
+</section>    </div>
   </div>
   <footer class="hidden-print">
-    <div class="container">
-      <div class="row flex">
-        <div class="col-md-6 flex">
-          <div class="col-md-6 flex-col-center row-gap-1 social-media">
-            <a href="https://www.facebook.com/IBICTbr/" target="_blank">
-              <img class="img-responsive" src="./files/facebook.png" alt="Facebook Logo">
-            </a>
-            <a href="https://twitter.com/ibictbr" target="_blank">
-              <img class="img-responsive" src="./files/twitter.png" alt="Twitter Logo">
-            </a>
-            <a href="https://www.youtube.com/user/IBICTbr/" target="_blank">
-              <img class="img-responsive" src="./files/youtube.png" alt="Youtube Logo">
-            </a>
-          </div>
-          <div class="col-md-6">
-            <nav class="nav-footer">
-              <ul>
-                <li>
-                  <a href="http://localhost/vufind/#">Início</a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/#">Sobre</a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/#">Fontes Coletadas</a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/#">Navegar</a>
-                </li>
-                <li>
-                  <a href="http://localhost/vufind/#">Idicadores</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+  <div class="container">
+
+    <div class="row flex footer">
+      <div class="col-md-6 col-xs-12 flex">
+        <div class="col-md-6 flex-col-center row-gap-1 social-media">
+          <a href="https://www.facebook.com/IBICTbr/" target="_blank">
+            <img class="img-responsive" src="./OasisBr_files/facebook.png" alt="Facebook Logo">
+          </a>
+          <a href="https://twitter.com/ibictbr" target="_blank">
+            <img class="img-responsive" src="./OasisBr_files/twitter.png" alt="Twitter Logo">
+          </a>
+          <a href="https://www.youtube.com/user/IBICTbr/" target="_blank">
+            <img class="img-responsive" src="./OasisBr_files/youtube.png" alt="Youtube Logo">
+          </a>
         </div>
-        <div class="col-md-6 flex-col-center">
-          <img class="img-responsive" src="./files/assinatura-colorida-ibict-mctic.png"
-            alt="Assinatura colorida do ibict e mctic">
+        <div class="col-md-6">
+          <nav class="nav-footer">
+            <ul>
+              <li>
+                <a href="http://localhost/vufind/#">Início</a>
+              </li>
+              <li>
+                <a href="http://localhost/vufind/about/home">Sobre</a>
+              </li>
+              <li>
+                <a href="http://localhost/vufind/#">Fontes Coletadas</a>
+              </li>
+              <li>
+                <a href="http://localhost/vufind/#">Navegar</a>
+              </li>
+              <li>
+                <a href="http://localhost/vufind/#">Indicadores</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
+      <div class="col-md-6 col-xs-12 flex-col-center">
+        <img class="img-responsive" src="./OasisBr_files/assinatura-colorida-ibict-mctic.png" alt="Assinatura colorida do ibict e mctic">
+      </div>
     </div>
-    <div class="poweredby">
-    </div>
-  </footer> <!-- MODAL IN CASE WE NEED ONE -->
-  <div id="modal" class="modal fade hidden-print" tabindex="-1" role="dialog" aria-labelledby="modal-title"
-    aria-hidden="true">
+  </div>
+  <div class="poweredby">
+      </div>
+</footer>  <!-- MODAL IN CASE WE NEED ONE -->
+  <div id="modal" class="modal fade hidden-print" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal">
@@ -404,15 +256,11 @@
             <path d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
-        <div class="modal-body">A carregar...</div>
+        <div class="modal-body">Carregando...</div>
       </div>
     </div>
   </div>
   <div class="offcanvas-overlay" data-toggle="offcanvas"></div>
+      
 
-
-  <div class="autocomplete-results hidden" style="top: 432px; min-width: 574px; left: 342px;"><i class="item loading">A
-      carregar...</i></div>
-</body>
-
-</html>
+<div class="autocomplete-results hidden" style="top: 290px; min-width: 574px; left: 327px;"><i class="item loading">Carregando...</i></div></body></html>

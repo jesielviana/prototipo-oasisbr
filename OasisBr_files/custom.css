@@ -29,12 +29,10 @@ header.hidden-print {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  .navbar-nav > li > a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-  }
+.navbar-nav > li > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
 }
 
 .nav > li > a:hover,
@@ -164,4 +162,26 @@ footer {
 .social-media img {
   width: 32px;
   height: 32px;
+}
+
+.partners div {
+  margin-bottom: 1rem;
+}
+
+/* media queries para tablet e celular */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 468px) {
+  .footer {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .nav-main {
+    height: auto;
+  }
 }
